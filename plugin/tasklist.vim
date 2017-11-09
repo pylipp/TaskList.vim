@@ -32,7 +32,7 @@
 "                 2. Setup any variables need in your vimrc file
 "                 3. Copy 'tasklist.vim' to your plugin directory.
 "
-"    Mapped Keys: <Leader>t   Display list.
+"    Mapped Keys: <Leader>t   Display list. DISABLED IN THIS FORK!
 "
 "          Usage: Start the script with the mapped key, a new window appears
 "                 with the matches found, moving around the window will also
@@ -363,11 +363,6 @@ endfunction
 
 " Command
 command! TaskList call s:TaskList()
-
-" Default key map
-if !hasmapto('<Plug>TaskList')
-    map <unique> <Leader>t <Plug>TaskList
-endif
 
 " Key map to Command
 nnoremap <unique> <script> <Plug>TaskList :TaskList<CR>
